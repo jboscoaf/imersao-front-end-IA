@@ -1,0 +1,23 @@
+Aula 1
+https://www.youtube.com/watch?v=oXVkjNaJQII
+Aula 2
+https://www.youtube.com/watch?v=KenvG09n17Y
+Aula 3
+https://www.youtube.com/watch?v=E003iO4MT20
+Aula 4
+https://www.youtube.com/watch?v=wLo9bfgla4k
+
+Prompts usados:
+- Me ajude a deixar o index.html mais semântico.
+- Crie os estilos inspirados na Netflix.
+- Adicione um comentário para cada linha de comando explicando sua ação.
+- Aplique responsividade para diferentes devices.
+- Coloque os perfis em listas ordenadas dentro de uma lista não ordenada.
+
+Link no GerHub:
+https://jboscoaf.github.io/imersao-front-end-IA/index.htm
+
+- No css remova a ordenação da lista.
+- Crie a funcionalidade de dark e light mode usando javascript
+- Retire o texto do botão do modo dark e light e utilize o toggle para visualização do botão
+- No index.html, usando localstorage, armazene o nome e da imagem do perfil ativo para exibir na página do catálogo.html
