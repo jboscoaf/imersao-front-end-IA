@@ -1,0 +1,152 @@
+/* Garante que a lista de perfis use flexbox e seja responsiva */
+.profile-list {
+    display: flex;
+    flex-direction: row;
+    gap: inherit;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Light mode: sobrescreve cores quando body.light-mode está ativo */
+body.light-mode {
+    background: #f5f5f5;
+    color: #222;
+}
+
+body.light-mode .profile figcaption {
+    background: rgba(255,255,255,0.8);
+    color: #222;
+}
+
+body.light-mode .profile img {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+body.light-mode .profile:hover img {
+    border: 4px solid #0078d7;
+}
+/* Remove marcadores das listas ordenadas de perfis */
+body {
+    background: #141414; /* Cor de fundo escura, estilo Netflix */
+    color: #fff; /* Cor do texto branca */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Fonte moderna */
+    margin: 0; /* Remove margens padrão */
+    min-height: 100vh; /* Garante altura mínima de tela cheia */
+}
+
+main {
+    display: flex; /* Usa flexbox para centralizar conteúdo */
+    flex-direction: column; /* Organiza em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Ocupa altura total da tela */
+}
+
+h1 {
+    font-size: 2.5rem; /* Tamanho grande para o título */
+    font-weight: 700; /* Negrito */
+    margin-bottom: 2rem; /* Espaço abaixo do título */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+}
+
+.container {
+    display: flex; /* Flexbox para perfis lado a lado */
+    flex-direction: row; /* Alinha horizontalmente por padrão */
+    gap: 2.5rem; /* Espaço entre perfis */
+    justify-content: center; /* Centraliza perfis */
+}
+
+.profile {
+    display: flex; /* Flexbox para alinhar imagem e nome */
+    flex-direction: column; /* Coluna: imagem em cima, nome embaixo */
+    align-items: center; /* Centraliza conteúdo */
+    transition: transform 0.2s, box-shadow 0.2s; /* Animação suave ao passar o mouse */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+}
+
+.profile img {
+    width: 160px; /* Largura da imagem do perfil */
+    height: 160px; /* Altura da imagem do perfil */
+    object-fit: cover; /* Corta a imagem para preencher o espaço */
+    border-radius: 8px; /* Cantos arredondados */
+    border: 4px solid transparent; /* Borda padrão invisível */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.7); /* Sombra para destacar */
+    margin-bottom: 1rem; /* Espaço abaixo da imagem */
+    transition: border-color 0.2s, box-shadow 0.2s; /* Animação suave, só cor da borda */
+}
+
+.profile:hover img {
+    border: 4px solid #ff0303; /* Mantém a largura da borda, muda só a cor */
+    /* box-shadow: 0 8px 32px rgba(58, 25, 204, 0.5);  Sombra mais intensa (opcional) */
+    /* transform: scale(1.05);  Aumenta levemente a imagem (opcional) */
+}
+
+.profile figcaption {
+    font-size: 1.2rem; /* Tamanho do nome do perfil */
+    font-weight: 500; /* Peso da fonte */
+    background: rgba(20,20,20,0.8); /* Fundo escuro translúcido */
+    padding: 0.5rem 1.5rem; /* Espaçamento interno */
+    border-radius: 0 0 8px 8px; /* Cantos arredondados na base */
+    margin-top: -0.5rem; /* Sobrepõe levemente a imagem */
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+}
+
+/* Responsividade para tablets e celulares */
+@media (max-width: 1024px) {
+    .container {
+        gap: 1.5rem;
+    }
+    .profile img {
+        width: 120px;
+        height: 120px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .profile img {
+        width: 100px;
+        height: 100px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 1rem;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .profile-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .profile img {
+        width: 80px;
+        height: 80px;
+    }
+    .container ul {
+        margin-top: 2.5rem;
+    }
+    .profile figcaption {
+        font-size: 1rem;
+        padding: 0.3rem 1rem;
+    }
+    h1 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+}
